@@ -9,3 +9,54 @@
 .logo {
   margin-left: 2rem;
 }
+
+.hamburger {
+  display: none;
+  font-size: 2rem;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+@media (max-width: 1068px) {
+  .links {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+  }
+
+  .links.show {
+    display: flex;
+    flex-direction: column; 
+  }
+
+  .links ul {
+    list-style: none;
+    padding: 0;
+    margin-left: auto;
+  }
+
+  .links ul li {
+    margin: 1rem 0;
+  }
+
+  .hamburger {
+    display: block;
+    margin-left: auto;
+  }
+}
+
+@media (max-width: 500px) {
+  .brand {
+    font-size: 1.2rem !important;
+  }
+}
